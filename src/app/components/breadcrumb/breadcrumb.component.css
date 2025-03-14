@@ -1,0 +1,17 @@
+.breadcrumb-container {
+  background-color: #719f31;
+  width: calc(2035px); /* Resta el ancho del sidebar */
+  height: 50px;
+  padding: 15px;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  top: 48px;
+  transition: width 0.3s ease-in-out, margin-left 0.3s ease-in-out;
+}
+
+/* ✅ Cuando el sidebar está oculto, ocupa toda la pantalla */
+.sidebar-hidden .breadcrumb-container {
+  width: 120%;
+  margin-left: 0;
+}

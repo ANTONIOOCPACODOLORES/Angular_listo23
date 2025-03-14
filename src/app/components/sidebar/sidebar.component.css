@@ -1,0 +1,48 @@
+/* Estilos del Sidebar */
+.sidebar {
+    background-color: #48666b !important; /* Azul fuerte */
+    width: 250px;
+    height: 100vh; /* Ocupa toda la altura */
+    transition: transform 0.3s ease-in-out;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+/* Clase para ocultar el sidebar */
+.hidden {
+    transform: translateX(-100%);
+}
+
+/* Estilos para el botón tipo hamburguesa */
+.toggle-btn {
+    position: fixed; /* Fijo en la pantalla */
+    top: 58px;
+    left: 0.1px;
+    background: #d3f990;
+    border: none;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    padding: 8px 15px;
+    border-radius: 10px;
+    z-index: 1000; /* Asegura que esté sobre todo */
+    transition: background 0.3s;
+}
+
+.toggle-btn:hover {
+    background-color: #4ac27c; /* Color al pasar el mouse */
+}
+
+/* Estilos para la descripción de la práctica */
+.sidebar h3 {
+    color: #000000;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.sidebar p {
+    color: #000000;
+    font-size: 18px;
+    line-height: 1.5;
+}

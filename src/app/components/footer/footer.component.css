@@ -1,0 +1,15 @@
+.footer {
+  width: 100%; /* Se expande completamente */
+  height: 50px;
+  background-color: #437631;
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  transition: width 0.3s ease-in-out;
+}
+/* ✅ Cuando el sidebar está oculto */
+.sidebar-hidden .footer {
+  width: 100%;
+}

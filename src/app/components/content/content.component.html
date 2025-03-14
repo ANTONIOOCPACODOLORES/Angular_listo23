@@ -1,0 +1,138 @@
+<div class="content-page d-flex flex-grow-1">
+  <div class="col-12 py-3 border border-success" style="background-color: #ebfff9; min-height: 100vh;">
+    <!-- Mostrar la tabla de sesiones si no hay una práctica seleccionada -->
+    <div *ngIf="!selectedPractice">
+      <br>
+      <h2>Lista de Sesiones</h2>
+      <div class="table-responsive">
+        
+      </div>
+    </div>
+
+    <!-- Mostrar el código de la práctica seleccionada -->
+    <div *ngIf="selectedPractice" class="practice-content">
+      <br>
+      <br>
+      
+      <h2>{{ selectedPractice.title }}</h2>
+
+      <!-- Usamos un switch para mostrar el código de la práctica seleccionada -->
+      <div [ngSwitch]="selectedPractice.title">
+        <!-- Práctica 1: Components in Angular -->
+        <div *ngSwitchCase="'1. Components in Angular'">
+          <h3>Implementación de la Práctica 1</h3>
+          <p>Hello Uriel Maldonado Bernabe</p>
+        </div>
+
+        <!-- Práctica 2: Updating the Component Class -->
+        <div *ngSwitchCase="'2. Updating the Component Class'">
+          <h3>Implementación de la Práctica 2</h3>
+          <p>hola necaxa canaditas, {{ 5 + 5 }}</p>
+        </div>
+
+        <!-- Práctica 3: Composing Components -->
+        <div *ngSwitchCase="'3. Composing Components'">
+          <h3>Implementación de la Práctica 3</h3>
+          <p>usuario: Uri Maldonado</p>
+        </div>
+
+        <!-- Práctica 4: Control Flow in Components - if -->
+        <div *ngSwitchCase="'4. Control Flow in Components - if'">
+          <h3>Implementación de la Práctica 4</h3>
+          <p>Está corriendo el servidor</p>
+        </div>
+
+        <!-- Práctica 5: Control Flow in Components - for -->
+        <div *ngSwitchCase="'5. Control Flow in Components - for'">
+          <h3>Implementación de la Práctica 5</h3>
+          <ul>
+            <li *ngFor="let user of users">{{ user.name }}</li>
+          </ul>
+        </div>
+
+        <!-- Práctica 6: Property Binding in Angular -->
+        <div *ngSwitchCase="'6. Property Binding in Angular'">
+          <h3>Implementación de la Práctica 6</h3>
+          <div [contentEditable]="isEditable"></div>
+        </div>
+
+        <!-- Práctica 7: Event Handling -->
+        <div *ngSwitchCase="'7. Event Handling'">
+          <h3>Implementación de la Práctica 7</h3>
+          <section (mouseover)="onMouseOver()">
+            There's a secret message for you, hover to reveal: {{ message }}
+          </section>
+        </div>
+
+        <!-- Práctica 8: Component Communication with Input -->
+        <div *ngSwitchCase="'8. Component Communication with Input'">
+          <h3>Implementación de la Práctica 8</h3>
+          <p>El nombre del usuario es: Urii badbeat</p>
+        </div>
+
+        <!-- Práctica 9: Component Communication with Output -->
+        <div *ngSwitchCase="'9. Component Communication with Output'">
+          <h3>Implementación de la Práctica 9</h3>
+          <button (click)="addItem()">Add Item</button>
+          <p>🐢 all the way down {{ items.length }}</p>
+        </div>
+
+        <!-- Práctica 10: Deferrable Views -->
+        <div *ngSwitchCase="'10. Deferrable Views'">
+          <h3>Implementación de la Práctica 10</h3>
+          <div>
+            <h1>Cómo me siento acerca de Angular</h1>
+            <article>
+              <p>Angular es mi framework favorito...</p>
+            </article>
+
+            @defer (on viewport) {
+              <ul>
+                <li>¡Construir para la web es fantástico!</li>
+                <li>¡La nueva sintaxis de plantillas es genial!</li>
+                <li>¡Estoy de acuerdo con los otros comentarios!</li>
+              </ul>
+            } @placeholder {
+              <p>Comentarios futuros</p>
+            } @loading (minimum 2s) {
+              <p>Cargando comentarios...</p>
+            }
+          </div>
+        </div>
+
+        <!-- Práctica 11: Optimizing Images -->
+        <div *ngSwitchCase="'11. Optimizing Images'">
+          <h3>Implementación de la Práctica 11</h3>
+          <p>usuario: Uriel</p>
+          <p>Preferred Framework:</p>
+          <ul>
+            <li>
+              Static Image:
+              <img ngSrc="/assets/logo.svg" alt="Angular logo" width="32" height="32" />
+            </li>
+            <li>
+              Dynamic Image:
+              <img [ngSrc]="logoUrl" [alt]="logoAlt" width="32" height="32" />
+            </li>
+          </ul>
+        </div>
+
+        <!-- Práctica 12: Routing Overview -->
+        <div *ngSwitchCase="'12. Routing Overview'">
+          <h3>Implementación de la Práctica 12</h3>
+          <nav>
+            <a href="/">Home</a>
+            |
+            <a href="/user">User</a>
+          </nav>
+          <router-outlet />
+        </div>
+
+        <!-- Si no coincide con ninguna práctica -->
+        <div *ngSwitchDefault>
+          <p>No se encontró el resultado para esta práctica.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

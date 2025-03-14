@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-light border border-danger fixed-top">
+  <div class="container">
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+
+        <!-- Prácticas con Texto como Botón -->
+        <li class="nav-item dropdown position-relative">
+          <a class="nav-link" href="#" id="practicasLink" data-bs-toggle="dropdown" aria-expanded="false">Prácticas</a>
+          <div id="practicasDropdown" class="dropdown-menu p-2">
+            <ul class="list-unstyled mb-0">
+              <li><a href="#" class="dropdown-item fw-semibold" (click)="selectPractice('1. Components in Angular'); $event.preventDefault()">Practica 1</a></li>
+              <li><a href="#" class="dropdown-item fw-semibold" (click)="selectPractice('2. Updating the Component Class'); $event.preventDefault()">Practica 2</a></li>
+              <li><a href="#" class="dropdown-item fw-semibold" (click)="selectPractice('3. Composing Components'); $event.preventDefault()">Practica 3. </a></li>
+              <li><a href="#" class="dropdown-item fw-semibold" (click)="selectPractice('4. Control Flow in Components - if'); $event.preventDefault()">Practica 4</a></li>
+              <li><a href="#" class="dropdown-item fw-semibold" (click)="selectPractice('5. Control Flow in Components - for'); $event.preventDefault()"> Practica 5.  - for</a></li>
+              <li><a href="#" class="dropdown-item fw-semibold" (click)="selectPractice('6. Property Binding in Angular'); $event.preventDefault()">Practica 6.</a></li>
+              <li><a href="#" class="dropdown-item fw-semibold" (click)="selectPractice('7. Event Handling'); $event.preventDefault()">Practica 7.</a></li>
+              <li><a href="#" class="dropdown-item fw-semibold" (click)="selectPractice('8. Component Communication with Input'); $event.preventDefault()">Practica 8. </a></li>
+              <li><a href="#" class="dropdown-item fw-semibold" (click)="selectPractice('9. Component Communication with Output'); $event.preventDefault()">Practica 9. </a></li>
+              <li><a href="#" class="dropdown-item fw-semibold" (click)="selectPractice('10. Deferrable Views'); $event.preventDefault()"> Practica 10.</a></li>
+              <li><a href="#" class="dropdown-item fw-semibold" (click)="selectPractice('11. Optimizing Images'); $event.preventDefault()">Practica 11.</a></li>
+              <li><a href="#" class="dropdown-item fw-semibold" (click)="selectPractice('12. Routing Overview'); $event.preventDefault()">Practica 12.</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+
+      <div class="dropdown">
+        <button class="btn btn-light dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+          
+        </button>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+          <li><a class="dropdown-item" href="#">Dashboard</a></li>
+          <li><a class="dropdown-item" href="#">Perfil</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item text-danger" href="#" (click)="logout()">Sign Out</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

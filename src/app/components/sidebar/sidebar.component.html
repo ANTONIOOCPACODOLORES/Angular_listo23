@@ -1,0 +1,34 @@
+<!-- Botón tipo hamburguesa SIEMPRE visible -->
+<button class="toggle-btn" (click)="toggle()">
+    ☰
+</button>
+
+<div class="container-fluid">
+    <div class="row flex-nowrap">
+        <!-- Sidebar -->
+        <div class="sidebar col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-light border border-success" 
+             [ngClass]="{'hidden': !isVisible}">
+
+            <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                <br><br><br><br>
+
+                <!-- Mostrar el menú solo si no hay una práctica seleccionada -->
+                <div *ngIf="!selectedPractice">
+                    <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+                        <span class="fs-5 d-none d-sm-inline">Menu</span>
+                    </a>
+
+                </div>
+
+               <!-- Mostrar la descripción de la práctica seleccionada -->
+               <div *ngIf="selectedPractice" class="mt-3 p-2 text-dark">
+                <h3>{{ selectedPractice.title }}</h3>
+                <p><strong>Unidad:</strong> {{ selectedPractice.unit }}</p>
+                <p><strong>Objetivo:</strong> {{ selectedPractice.objective }}</p>
+                <p><strong>Descripción:</strong> {{ selectedPractice.description }}</p>
+              </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>
