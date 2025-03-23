@@ -2,12 +2,13 @@
   
   /* Estilos para el contenedor de la práctica */
   .practice-content {
-    max-width: 800px; /* Ancho máximo del contenido */
-    width: 100%; /* Ocupa todo el ancho disponible */
-    padding: 20px; /* Espaciado interno */
-    background-color: #7c7b27; /* Fondo blanco */
+    max-width: 1600px; /* Ancho máximo del contenido */
+    width: 500%; /* Ocupa todo el ancho disponible */
+    padding: 190px; /* Espaciado interno */
+    background-color: #2e7e74; /* Fondo blanco */
     border-radius: 8px; /* Bordes redondeados */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center;
   }
   
   /* Estilos para los títulos */

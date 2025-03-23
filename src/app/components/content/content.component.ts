@@ -15,11 +15,11 @@ export class ContentComponent implements OnInit {
 
   // Variables para la Práctica 5
   users = [
-    { id: 0, name: 'Uriel' },
-    { id: 1, name: 'Kevin' },
-    { id: 2, name: 'Paco' },
+    { id: 0, name: 'Josue' },
+    { id: 1, name: 'Anthony' },
+    { id: 2, name: 'Andrea' },
     { id: 3, name: 'Dulce' },
-    { id: 4, name: 'Edwin' },
+    { id: 4, name: 'Jesus A.'},
   ];
 
   // Variables para la Práctica 6
@@ -37,7 +37,7 @@ export class ContentComponent implements OnInit {
   // Variables para la Práctica 11
   logoUrl = '/assets/logo.svg';
   logoAlt = 'Angular logo';
-  usuario = 'Uriel';
+  usuario = 'Anthony';
 
   constructor(private practiceService: PracticeService) {}
 
@@ -49,7 +49,7 @@ export class ContentComponent implements OnInit {
 
   // Método para la Práctica 7
   onMouseOver() {
-    this.message = 'Hola Soy Uriel';
+    this.message = 'Hola Ten un bonito día, soy Anthony.';
   }
 
   // Método para la Práctica 9
