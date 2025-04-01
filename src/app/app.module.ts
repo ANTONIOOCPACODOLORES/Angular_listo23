@@ -7,10 +7,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { ContentComponent } from './components/content/content.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router'; // Importa RouterModule
-import { routes } from './app.routes'; // Asegúrate de importar las rutas
-
-
+import { RouterModule } from '@angular/router';
+import { routes } from './app.routes';
+import { Grafica1Component } from './grafica1/grafica1.component'; // Corregido aquí
 
 @NgModule({
   declarations: [
@@ -19,13 +18,13 @@ import { routes } from './app.routes'; // Asegúrate de importar las rutas
     NavbarComponent,
     ContentComponent,
     FooterComponent,
- 
+    Grafica1Component, // Y aquí
   ],
   imports: [
     BrowserModule,
     CommonModule,
     FormsModule,
-    RouterModule.forRoot(routes) // Agrega esto para que funcionen las rutas
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
