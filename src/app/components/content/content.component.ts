@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule , NgOptimizedImage } from '@angular/common';
 import { PracticeService } from '../../services/practice.service';
 import { RouterOutlet } from '@angular/router'; 
+import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-content',
   standalone: true,
-  imports: [CommonModule, NgOptimizedImage, RouterOutlet],
+  imports: [CommonModule, NgOptimizedImage, RouterOutlet,FooterComponent],
   templateUrl: './content.component.html',
   styleUrls: ['./content.component.css'],
 })

@@ -15,8 +15,10 @@ import { RouterModule } from '@angular/router';
     SidebarComponent,
     BreadcrumbComponent,
     FooterComponent,
+    RouterModule,
+    CommonModule,ContentComponent
   ],
-  templateUrl: './app.component.html',
+  templateUrl: './index.componet.html',
   styleUrl: './app.component.css',
 })
 export class AppComponent {

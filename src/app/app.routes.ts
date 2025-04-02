@@ -22,5 +22,5 @@ export const routes: Routes = [
   { path: 'assigned-graph', component: Grafica2Component },
 
   // Redirección para rutas no encontradas
-  { path: '**', redirectTo: '' }
+  { path: '**', redirectTo: 'login' }
 ];

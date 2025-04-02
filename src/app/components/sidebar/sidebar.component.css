@@ -1,12 +1,16 @@
 /* Estilos del Sidebar */
 .sidebar {
     background-color: #48666b !important; /* Azul fuerte */
-    width: 250px;
+    width: 25vw;
     height: 100vh; /* Ocupa toda la altura */
     transition: transform 0.3s ease-in-out;
     position: fixed;
     left: 0;
     top: 0;
+    overflow-y: auto;
+    scrollbar-width: none; 
+    padding: 10px;
+
 }
 
 /* Clase para ocultar el sidebar */
@@ -19,7 +23,7 @@
     position: fixed; /* Fijo en la pantalla */
     top: 58px;
     left: 0.1px;
-    background: #d3f990;
+    background: #ffffff00;
     border: none;
     font-size: 15px;
     color: rgb(255, 255, 255);
@@ -30,8 +34,8 @@
     transition: background 0.3s;
 }
 
-.toggle-btn:hover {
-    background-color: #4ac27c; /* Color al pasar el mouse */
+.toggle-btn:enabled {
+    background: #ffffff00;
 }
 
 /* Estilos para la descripción de la práctica */

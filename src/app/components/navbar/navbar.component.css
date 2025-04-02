@@ -1,52 +1,61 @@
 /* Fondo azul fuerte para la navbar */
 nav.navbar {
-    background-color: #5b727d !important;
+  background-color: #5b727d !important;
+  border: none;
 }
 
 /* Estilos del dropdown */
 #practicasDropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    min-width: 250px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: opacity 0.3s ease-in-out;
-    opacity: 0;
-    pointer-events: none;
-    max-height: 300px;  /* Limitar la altura */
-    overflow-y: auto;   /* Agregar scroll si el contenido excede */
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  min-width: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+  cursor: pointer;
+  pointer-events: none;
+  max-height: 300px; /* Limitar la altura */
+  overflow-y: auto;
+  scrollbar-width: none; 
 }
 
 /* Mostrar el menú cuando el cursor está en "Prácticas" */
 .nav-item.dropdown:hover #practicasDropdown {
-    display: block;
-    opacity: 1;
-    pointer-events: auto;
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 /* Alinear bien los elementos dentro del dropdown */
 #practicasDropdown .dropdown-item {
-    padding: 8px 15px;
-    display: block;
-    color: #333;
-    font-weight: bold;
+  padding: 8px;
+  text-align: center;
+  display: block;
+  color: #333;
+  font-weight: bold;
 }
 
 /* Opcional: Cambiar color de fondo al pasar el mouse */
 #practicasDropdown .dropdown-item:hover {
-    background-color: #f8f9fa;
+  background-color: #2590e7;
+  border-radius: 3px;
 }
 
 /* Estilo para la descripción de cada práctica */
 #practicasDropdown small {
-    color: #666;
-    font-size: 13px;
-    margin-left: 10px;
-    display: block;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #eee;
+  color: #666;
+  font-size: 13px;
+  margin-left: 10px;
+  display: block;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #eee;
+}
+#userDropdown{
+    background: #ffffff00;
+    border: none;
 }

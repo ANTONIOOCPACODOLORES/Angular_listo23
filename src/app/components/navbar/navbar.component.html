@@ -18,7 +18,6 @@
     data-bs-toggle="dropdown" 
     aria-expanded="false"
     routerLinkActive="active"
-    routerLinkActiveOptions="{ exact: false }"
   >
     Gráficas
   </a>
@@ -52,7 +51,6 @@
 <li class="nav-item dropdown">
   <a 
     class="nav-link dropdown-toggle" 
-    routerLink="/tables" 
     routerLinkActive="active"
     data-bs-toggle="dropdown"
   >
@@ -60,12 +58,12 @@
   </a>
   <ul class="dropdown-menu">
     <li>
-      <a class="dropdown-item" routerLink="/tables/1" routerLinkActive="active">
+      <a class="dropdown-item" routerLink="/simple-table" routerLinkActive="active">
         Ventas
       </a>
     </li>
     <li>
-      <a class="dropdown-item" routerLink="/tables/2" routerLinkActive="active">
+      <a class="dropdown-item" routerLink="/dataTable-table" routerLinkActive="active">
         Inventario
       </a>
     </li>
@@ -109,3 +107,4 @@
     </div>
   </div>
 </nav>
+<router-outlet></router-outlet>

@@ -1,62 +1,52 @@
-/* Asegurar que la página ocupa toda la pantalla y no permite scroll */
-html, body {
-  margin: 0;
-  padding: 0;
+/* Estructura principal */
+.layout {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
-  overflow: hidden; /* Bloquea el scroll */
+  overflow: hidden;
 }
 
-/* Contenedor principal con Grid */
-.grid-container {
-  display: grid;
-  grid-template-areas:
-    "navbar navbar"
-    "breadcrumb breadcrumb"
-    "sidebar content"
-    "sidebar footer";
-  grid-template-rows: auto auto 1fr auto; /* Navbar, Breadcrumb, Contenido, Footer */
-  grid-template-columns: 250px 1fr; /* Sidebar fijo y contenido flexible */
-  height: 100vh;
-  width: 100vw;
-  transition: grid-template-columns 0.3s ease-in-out;
+/* Navbar fijo arriba */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 1000;
 }
 
-/* Definir las áreas del grid */
-app-navbar {
-  grid-area: navbar;
-}
-
-app-breadcrumb {
-  grid-area: breadcrumb;
-}
-
-app-sidebar {
-  grid-area: sidebar;
-  background-color: #f4f4f4;
-  overflow: hidden; /* Evita que el sidebar haga scroll */
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  height: calc(100vh - 60px);
   transition: width 0.3s ease-in-out;
 }
 
-app-content {
-  grid-area: content;
+/* Sidebar colapsado */
+.sidebar.collapsed {
+  width: 60px;
+}
+
+/* Contenido principal */
+.content {
+  flex: 1;
+  transition: margin-left 0.3s ease-in-out;
+  overflow-y: auto;
+}
+
+
+
+/* Footer al final */
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0px;
+  width: 100%;
+  height: 10px;
   display: flex;
-  flex-direction: column;
-  height: 100%;
-  overflow: hidden;
-}
-
-app-footer {
-  grid-area: footer;
-  background-color: #ddd;
-  padding: 10px;
-}
-
-/* ✅ Cuando el sidebar está oculto, los demás elementos ocupan su espacio */
-.sidebar-hidden {
-  grid-template-columns: 0px 1fr; /* Oculta el sidebar y expande el contenido */
-}
-
-.sidebar-hidden app-sidebar {
-  width: 0;
-  overflow: hidden;
+  justify-content: center;
+  align-items: center;
 }
