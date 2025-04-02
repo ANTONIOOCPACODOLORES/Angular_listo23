@@ -6,7 +6,7 @@ import { ContentComponent } from './components/content/content.component';
 import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
-import { Grafica1Component } from './grafica1/grafica1.component'; // <-- Añade esta línea
+import { GraficaBasicaComponent } from './grafica1/grafica1.component'; // <-- Añade esta línea
 
 @Component({
   selector: 'app-root',
@@ -19,7 +19,7 @@ import { Grafica1Component } from './grafica1/grafica1.component'; // <-- Añade
     BreadcrumbComponent,
     FooterComponent,
     LoginComponent,
-    Grafica1Component // <-- Añádelo aquí
+    GraficaBasicaComponent// <-- Añádelo aquí
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']

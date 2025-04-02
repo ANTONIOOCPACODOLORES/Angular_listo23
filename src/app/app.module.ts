@@ -9,7 +9,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
-import { Grafica1Component } from './grafica1/grafica1.component'; // Corregido aquí
+import { GraficaBasicaComponent } from './grafica1/grafica1.component'; // Corregido aquí
+imports: [RouterModule.forRoot(routes)]
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import { Grafica1Component } from './grafica1/grafica1.component'; // Corregido 
     NavbarComponent,
     ContentComponent,
     FooterComponent,
-    Grafica1Component, // Y aquí
+    GraficaBasicaComponent, // Y aquí
   ],
   imports: [
     BrowserModule,

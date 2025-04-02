@@ -9,8 +9,68 @@
       <ul class="navbar-nav me-auto">
         <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Datatables</a></li>
-        <li class="nav-item"><a class="nav-link" href="#">Graficas</a></li>
+        
+        <!-- Navbar.component.html -->
+<li class="nav-item dropdown position-relative">
+  <a 
+    class="nav-link" 
+    id="graficasLink" 
+    data-bs-toggle="dropdown" 
+    aria-expanded="false"
+    routerLinkActive="active"
+    routerLinkActiveOptions="{ exact: false }"
+  >
+    Gráficas
+  </a>
+  <div id="graficasDropdown" class="dropdown-menu p-2">
+    <ul class="list-unstyled mb-0">
+      <li>
+        <a 
+          class="dropdown-item fw-semibold" 
+          routerLink="/graficas/1" 
+          routerLinkActive="active"
+          (click)="selectGraphic('Gráfica 1')"
+        >
+          Gráfica 1
+        </a>
+      </li>
+      <li>
+        <a 
+          class="dropdown-item fw-semibold" 
+          routerLink="/graficas/2" 
+          routerLinkActive="active"
+          (click)="selectGraphic('Gráfica 2')"
+        >
+          Gráfica 2
+        </a>
+      </li>
+      <!-- Agrega más gráficas según necesites -->
+    </ul>
+  </div>
+</li>
+
+<li class="nav-item dropdown">
+  <a 
+    class="nav-link dropdown-toggle" 
+    routerLink="/tables" 
+    routerLinkActive="active"
+    data-bs-toggle="dropdown"
+  >
+    Datatables
+  </a>
+  <ul class="dropdown-menu">
+    <li>
+      <a class="dropdown-item" routerLink="/tables/1" routerLinkActive="active">
+        Ventas
+      </a>
+    </li>
+    <li>
+      <a class="dropdown-item" routerLink="/tables/2" routerLinkActive="active">
+        Inventario
+      </a>
+    </li>
+  </ul>
+</li>
 
         <!-- Prácticas con Texto como Botón -->
         <li class="nav-item dropdown position-relative">

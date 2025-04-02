@@ -11,6 +11,10 @@ import { CommonModule } from '@angular/common';
 })
 export class NavbarComponent {
   @Output() logoutEvent = new EventEmitter<void>();
+  selectedGraphic: string= '';
+  selectGraphic(graphicName: string): void {
+    this.selectedGraphic = graphicName;
+  }
 
   constructor(private practiceService: PracticeService) {} // Inyecta el servicio
 
