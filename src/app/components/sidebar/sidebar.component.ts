@@ -4,7 +4,6 @@ import { PracticeService } from '../../services/practice.service';
 
 @Component({
   selector: 'app-sidebar',
-  standalone: true, // Asegúrate de que standalone esté habilitado
   imports: [CommonModule], // Agrega CommonModule aquí
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css'],

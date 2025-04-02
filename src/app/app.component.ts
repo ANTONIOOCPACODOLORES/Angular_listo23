@@ -10,7 +10,6 @@ import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
   imports: [
     NavbarComponent,
     SidebarComponent,
@@ -20,7 +19,6 @@ import { RouterModule } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-
 export class AppComponent {
   isAuthenticated: boolean = false;
   sidebarVisible: boolean = true;
