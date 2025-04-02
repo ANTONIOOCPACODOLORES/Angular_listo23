@@ -59,3 +59,18 @@ nav.navbar {
     background: #ffffff00;
     border: none;
 }
+
+li{
+  cursor: pointer;
+}
+
+#graficasDropdown{
+  min-width: 85px;
+  align-items: center;
+}
+
+#graficasDropdown li:hover{
+  background-color: #5a5a5a09;
+  width: 100%;
+  border-radius: 5px;
+}

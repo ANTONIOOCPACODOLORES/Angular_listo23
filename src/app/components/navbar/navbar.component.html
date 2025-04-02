@@ -23,27 +23,9 @@
   </a>
   <div id="graficasDropdown" class="dropdown-menu p-2">
     <ul class="list-unstyled mb-0">
-      <li>
-        <a 
-          class="dropdown-item fw-semibold" 
-          routerLink="/graficas/1" 
-          routerLinkActive="active"
-          (click)="selectGraphic('Gráfica 1')"
-        >
-          Gráfica 1
-        </a>
-      </li>
-      <li>
-        <a 
-          class="dropdown-item fw-semibold" 
-          routerLink="/graficas/2" 
-          routerLinkActive="active"
-          (click)="selectGraphic('Gráfica 2')"
-        >
-          Gráfica 2
-        </a>
-      </li>
-      <!-- Agrega más gráficas según necesites -->
+      <li><a (click)="navigate('GraficaBasicaComponent')">Gráfica 1</a></li>
+      <li><a (click)="navigate('Grafica2Component')">Gráfica 2</a></li>
+      <li><a (click)="navigate('GraficaJsonComponent')">Gráfica 3</a></li>
     </ul>
   </div>
 </li>
@@ -57,16 +39,9 @@
     Datatables
   </a>
   <ul class="dropdown-menu">
-    <li>
-      <a class="dropdown-item" routerLink="/simple-table" routerLinkActive="active">
-        Ventas
-      </a>
-    </li>
-    <li>
-      <a class="dropdown-item" routerLink="/dataTable-table" routerLinkActive="active">
-        Inventario
-      </a>
-    </li>
+    <li><a (click)="navigate('Table1Component')">Tabla 1</a></li>
+    <li><a (click)="navigate('TablesComponent')">Tabla 2</a></li>
+    <li><a (click)="navigate('Table2Component')">Tabla 3</a></li>
   </ul>
 </li>
 

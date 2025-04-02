@@ -1,6 +1,6 @@
 <div class="layout">
     <header class="navbar">
-      <app-navbar (logoutEvent)="handleLogout()"></app-navbar>
+      <app-navbar (changeView)="changeComponent($event)" (logoutEvent)="handleLogout()"></app-navbar>
     </header>
   
     <div class="breadcrumb">

@@ -11,7 +11,9 @@ import { CommonModule } from '@angular/common';
 })
 export class NavbarComponent {
   @Output() logoutEvent = new EventEmitter<void>();
-  selectedGraphic: string= '';
+  @Output() changeView = new EventEmitter<string>();
+
+  selectedGraphic: string= 'GraficaBasicaComponent';
   selectGraphic(graphicName: string): void {
     this.selectedGraphic = graphicName;
   }
@@ -25,5 +27,9 @@ export class NavbarComponent {
 
   selectPractice(practice: string) {
     this.practiceService.setSelectedPractice(practice); // Usa el servicio para enviar la práctica
+  }
+
+  navigate(view: string) {
+    this.changeView.emit(view);
   }
 }

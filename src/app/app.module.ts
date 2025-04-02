@@ -9,8 +9,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
-import { GraficaBasicaComponent } from './grafica1/grafica1.component'; // Corregido aquí
-imports: [RouterModule.forRoot(routes)]
+import { GraficaBasicaComponent } from './components/grafica-basica/grafica1.component'; // Corregido aquí
+imports: [RouterModule.forRoot(routes)];
 
 @NgModule({
   declarations: [
@@ -19,15 +19,15 @@ imports: [RouterModule.forRoot(routes)]
     NavbarComponent,
     ContentComponent,
     FooterComponent,
-    GraficaBasicaComponent, // Y aquí
+    GraficaBasicaComponent,
   ],
   imports: [
     BrowserModule,
     CommonModule,
     FormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

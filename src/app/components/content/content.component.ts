@@ -1,26 +1,41 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule , NgOptimizedImage } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { PracticeService } from '../../services/practice.service';
-import { RouterOutlet } from '@angular/router'; 
-import { FooterComponent } from '../footer/footer.component';
+import { RouterOutlet } from '@angular/router';
+import { GraficaBasicaComponent } from '../grafica-basica/grafica1.component';
+import { Grafica2Component } from '../grafica-asignada/grafica2.component';
+import { GraficaJsonComponent } from '../grafica-json/grafica-json.component';
+import { Table1Component } from '../table-basica/table1.component';
+import { Table2Component } from '../table-json/table2.component';
+import { TablesComponent } from '../table-assign/tables.component';
 
 @Component({
   selector: 'app-content',
   standalone: true,
-  imports: [CommonModule, NgOptimizedImage, RouterOutlet,FooterComponent],
+  imports: [
+    CommonModule,
+    NgOptimizedImage,
+    RouterOutlet,
+    Grafica2Component,
+    GraficaBasicaComponent,
+    GraficaJsonComponent,
+    Table1Component,
+    Table2Component,
+    TablesComponent
+  ],
   templateUrl: './content.component.html',
-  styleUrls: ['./content.component.css'],
+  styleUrl: './content.component.css',
 })
 export class ContentComponent implements OnInit {
   selectedPractice: { title: string; description: string } | null = null;
-
+  activeComponent: string = '';
   // Variables para la Práctica 5
   users = [
     { id: 0, name: 'Josue' },
     { id: 1, name: 'Anthony' },
     { id: 2, name: 'Andrea' },
     { id: 3, name: 'Dulce' },
-    { id: 4, name: 'Jesus A.'},
+    { id: 4, name: 'Jesus A.' },
   ];
 
   // Variables para la Práctica 6
@@ -61,5 +76,10 @@ export class ContentComponent implements OnInit {
   // Método para la Práctica 10
   loadComments() {
     this.showComments = true;
+  }
+
+  // Método para cambiar el componente visible
+  changeComponent(component: string) {
+    this.activeComponent = component;
   }
 }

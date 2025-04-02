@@ -43,4 +43,10 @@ export class AppComponent {
   toggleSidebar() {
     this.sidebarVisible = !this.sidebarVisible;
   }
+
+  activeComponent: string = ''; 
+
+  changeComponent(view: string) {
+    this.activeComponent = view;
+  }
 }
