@@ -2,8 +2,9 @@ import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-login',
+  standalone:true,
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrl: './login.component.css'
 })
 export class LoginComponent {
   @Output() loginSuccess = new EventEmitter<void>(); // Emite el evento cuando se haga login

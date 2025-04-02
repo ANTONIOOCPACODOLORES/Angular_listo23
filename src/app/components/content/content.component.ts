@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule , NgOptimizedImage } from '@angular/common';
 import { PracticeService } from '../../services/practice.service';
-import { RouterOutlet } from '@angular/router'; // 
+import { RouterOutlet } from '@angular/router'; 
 
 @Component({
   selector: 'app-content',

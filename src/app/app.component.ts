@@ -6,7 +6,7 @@ import { ContentComponent } from './components/content/content.component';
 import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { LoginComponent } from './components/login/login.component';
-import { GraficaBasicaComponent } from './grafica1/grafica1.component'; // <-- Añade esta línea
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -19,10 +19,10 @@ import { GraficaBasicaComponent } from './grafica1/grafica1.component'; // <-- A
     BreadcrumbComponent,
     FooterComponent,
     LoginComponent,
-    GraficaBasicaComponent// <-- Añádelo aquí
+    RouterModule,
   ],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
   isAuthenticated: boolean = false;

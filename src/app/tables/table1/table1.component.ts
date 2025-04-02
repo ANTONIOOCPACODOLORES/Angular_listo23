@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 interface Persona {
   id: number;
@@ -10,7 +11,8 @@ interface Persona {
 @Component({
   selector: 'app-table1',
   templateUrl: './table1.component.html',
-  styleUrls: ['./table1.component.css']
+  imports:[CommonModule],
+  styleUrl: './table1.component.css'
 })
 export class Table1Component {
   personas: Persona[] = [ // ← El nombre DEBE coincidir con el usado en el HTML
