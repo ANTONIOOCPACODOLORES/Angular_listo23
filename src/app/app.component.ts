@@ -12,18 +12,15 @@ import { RouterModule } from '@angular/router';
   selector: 'app-root',
   standalone: true,
   imports: [
-    CommonModule,
     NavbarComponent,
     SidebarComponent,
-    ContentComponent,
     BreadcrumbComponent,
     FooterComponent,
-    LoginComponent,
-    RouterModule,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
+
 export class AppComponent {
   isAuthenticated: boolean = false;
   sidebarVisible: boolean = true;
