@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { PracticeService } from '../../services/practice.service';
 import { RouterOutlet } from '@angular/router';
@@ -28,7 +28,8 @@ import { TablesComponent } from '../table-assign/tables.component';
 })
 export class ContentComponent implements OnInit {
   selectedPractice: { title: string; description: string } | null = null;
-  activeComponent: string = '';
+  @Input() activeComponent: string='';
+  
   // Variables para la Práctica 5
   users = [
     { id: 0, name: 'Josue' },
@@ -51,7 +52,7 @@ export class ContentComponent implements OnInit {
   showComments = false;
 
   // Variables para la Práctica 11
-  logoUrl = '/assets/logo.svg';
+  logoUrl = '../../assets/calamrdo-cholo.png';
   logoAlt = 'Angular logo';
   usuario = 'Anthony';
 
@@ -79,7 +80,5 @@ export class ContentComponent implements OnInit {
   }
 
   // Método para cambiar el componente visible
-  changeComponent(component: string) {
-    this.activeComponent = component;
-  }
+
 }

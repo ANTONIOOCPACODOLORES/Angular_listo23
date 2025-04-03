@@ -1,0 +1,8 @@
+[
+    { "id": 1, "name": "Usain Bolt", "sport": "Athletics", "country": "Jamaica", "medal": "Gold" },
+    { "id": 2, "name": "Simone Biles", "sport": "Gymnastics", "country": "USA", "medal": "Gold" },
+    { "id": 3, "name": "Michael Phelps", "sport": "Swimming", "country": "USA", "medal": "Gold" },
+    { "id": 4, "name": "Mo Farah", "sport": "Athletics", "country": "UK", "medal": "Gold" },
+    { "id": 5, "name": "Rafa Nadal", "sport": "Tennis", "country": "Spain", "medal": "Gold" }
+  ]
+  

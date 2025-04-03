@@ -9,7 +9,10 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { routes } from './app.routes';
-import { GraficaBasicaComponent } from './components/grafica-basica/grafica1.component'; // Corregido aquí
+import { HttpClientModule } from '@angular/common/http';
+import { GraficaBasicaComponent } from './components/grafica-basica/grafica1.component'; 
+import { MatTableModule } from '@angular/material/table';
+
 imports: [RouterModule.forRoot(routes)];
 
 @NgModule({
@@ -20,6 +23,9 @@ imports: [RouterModule.forRoot(routes)];
     ContentComponent,
     FooterComponent,
     GraficaBasicaComponent,
+    BrowserModule,
+    HttpClientModule,
+    MatTableModule
   ],
   imports: [
     BrowserModule,
